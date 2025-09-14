@@ -1,0 +1,28 @@
+# ================================
+# Python библиотеки
+# ================================
+flask>=3.0.0
+pdf2image>=1.17.0
+pillow>=10.0.0
+numpy>=1.24.0
+opencv-python>=4.8.0
+pytesseract>=0.3.10
+requests>=2.31.0
+
+# ================================
+# Системные зависимости (Ubuntu/Debian)
+# ================================
+# Для работы pdf2image
+apt install -y poppler-utils
+# Для OCR (русский, английский, казахский языки)
+apt install -y tesseract-ocr tesseract-ocr-rus tesseract-ocr-kaz tesseract-ocr-eng
+
+# ================================
+# Установка Ollama
+# ================================
+curl -fsSL https://ollama.ai/install.sh | sh
+
+# ================================
+# Модель для Ollama
+# ================================
+ollama pull gemma2:2b-instruct-q4_K_M
